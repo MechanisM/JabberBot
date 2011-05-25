@@ -5,7 +5,7 @@ import xmpp
 
 class Plugin(object):
     only_admin = False
-    command = "off"
+    command = "pass"
 
     @classmethod
     def run(cls, bot, mess):
