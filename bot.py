@@ -8,6 +8,8 @@ import xmpp
 LOGIN = "testaccforbot@jabber.ru"
 PASSWORD = "qwerty3"
 
+PASS_FOR_ADMIN = "123"
+
 def loadPlugins(bot):
     for file in glob.glob("plugins/*.py"):
         if "__init__.py" in file:
@@ -61,7 +63,10 @@ bot.plugins = {
     "public_commands": [],
     "commands": [],
 }
-bot.config = {'user_no_pass':[]}
+bot.config = {
+    'user_no_pass':[],
+    'pass': PASS_FOR_ADMIN
+}
 
 loadPlugins(bot)
 
